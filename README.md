@@ -71,19 +71,19 @@ Day-of-week is the strongest predictor of pollution levels (42% feature importan
 \[Live Demo](https://smart-city-analytics-jexzhpr9k7vb97morgl7app.streamlit.app)
 ## Air Quality Analytics
 
-![Air Quality](images/air-quality-patterns.png)
+![Air Quality](./images/Air%20Quality%20Pattern.png)
 
 ---
 
 ## Energy Demand Forecast
 
-![Energy Forecast](images/energy-forecast.png)
+![Energy Forecast](./images/Energy%20Forecast.png)
 
 ---
 
 ## Pollution Prediction & What-if Simulator
 
-![Pollution Predictor](images/pollution-predictor.png)
+![Pollution Predictor](./images/Pollution%20Predictor.png)
 
 \## Run it locally
 
