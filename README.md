@@ -1,10 +1,15 @@
 \# NYC Smart City Predictive Analytics
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-red?logo=streamlit)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange?logo=scikitlearn)
+![Prophet](https://img.shields.io/badge/Prophet-Time%20Series-green)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
+An end-to-end machine learning project that predicts PM2.5 pollution levels and forecasts energy demand for New York City using live public datasets from OpenAQ, NYC DOT, and the U.S. Energy Information Administration (EIA).
 
+🔴 **Live Demo:** https://smart-city-analytics-jexzhpr9k7vb97morgl7app.streamlit.app
 
 An end-to-end data pipeline and interactive dashboard that predicts pollution levels and forecasts energy demand for New York City, using real, live open data.
-
-
 
 \## What it does
 
