@@ -7,7 +7,7 @@
 
 An end-to-end machine learning project that predicts PM2.5 pollution levels and forecasts energy demand for New York City using live public datasets from OpenAQ, NYC DOT, and the U.S. Energy Information Administration (EIA).
 
-🔴 **Live Demo:** https://smart-city-analytics-jexzhpr9k7vb97morgl7app.streamlit.app
+🔴 **Live Demo:** [Open Dashboard](https://smart-city-analytics-jexzhpr9k7vb97morgl7app.streamlit.app)
 
 An end-to-end data pipeline and interactive dashboard that predicts pollution levels and forecasts energy demand for New York City, using real, live open data.
 
