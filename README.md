@@ -66,6 +66,25 @@ An end-to-end machine learning project that predicts PM2.5 pollution levels and 
 | Linear Regression | Baseline Comparison | MAE | Higher than Random Forest |
 | Prophet | Energy Forecast | Forecast Horizon | 48 Hours |
 
+
+## Project Structure
+
+```text
+smart-city-analytics/
+│
+├── app.py
+├── data/
+├── images/
+├── fetch_air_quality.py
+├── fetch_energy.py
+├── fetch_traffic.py
+├── clean_and_merge.py
+├── train_model.py
+├── forecast_energy.py
+├── requirements.txt
+└── README.md
+```
+
 \## Key finding
 
 Day-of-week is the strongest predictor of pollution levels (42% feature importance) — even more than energy demand (37%) or hour of day (21%), suggesting weekly activity rhythms matter more than time-of-day alone.
