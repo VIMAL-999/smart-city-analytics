@@ -85,6 +85,15 @@ smart-city-analytics/
 └── README.md
 ```
 
+## Future Improvements
+
+- Integrate live traffic data into the prediction model
+- Add weather features for improved accuracy
+- Automate model retraining using scheduled pipelines
+- Deploy with Docker
+- Extend predictions to multiple pollutants (NO₂, O₃, CO)
+
+
 \## Key finding
 
 Day-of-week is the strongest predictor of pollution levels (42% feature importance) — even more than energy demand (37%) or hour of day (21%), suggesting weekly activity rhythms matter more than time-of-day alone.
