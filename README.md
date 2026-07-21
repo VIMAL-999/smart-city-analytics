@@ -58,7 +58,13 @@ An end-to-end machine learning project that predicts PM2.5 pollution levels and 
 
 5\. \*\*What-if scenarios\*\* — added a live simulator showing predicted pollution impact of reduced city activity
 
+## Model Performance
 
+| Model | Purpose | Metric | Score |
+|-------|----------|--------|------:|
+| Random Forest | PM2.5 Prediction | MAE | 2.5 |
+| Linear Regression | Baseline Comparison | MAE | Higher than Random Forest |
+| Prophet | Energy Forecast | Forecast Horizon | 48 Hours |
 
 \## Key finding
 
