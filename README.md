@@ -42,22 +42,9 @@ An end-to-end machine learning project that predicts PM2.5 pollution levels and 
 
 \- \*\*Dashboard:\*\* Streamlit, Plotly
 
-## Project  workflow
+## Project Workflow
 
-OpenAQ API
-      │
-NYC DOT API
-      │
-EIA API
-      ▼
-Data Cleaning & Feature Engineering
-      ▼
-Machine Learning Models
-(Random Forest + Prophet)
-      ▼
-Interactive Streamlit Dashboard
-      ▼
-Pollution Prediction & Energy Forecast
+![Project Workflow](images/workflow.png)
 
 \## Project pipeline
 
