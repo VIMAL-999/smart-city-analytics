@@ -42,7 +42,7 @@ An end-to-end machine learning project that predicts PM2.5 pollution levels and 
 
 \- \*\*Dashboard:\*\* Streamlit, Plotly
 
-## Project Workflow
+## Project  workflow
 
 OpenAQ API
       │
