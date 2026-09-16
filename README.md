@@ -4,13 +4,13 @@
 
 ### Machine Learning for Air Quality & Energy Demand Forecasting
 
-[![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)](https://www.python.org/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-App-red?logo=streamlit)](https://streamlit.io/)
-[![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange?logo=scikit-learn)](https://scikit-learn.org/)
-[![Prophet](https://img.shields.io/badge/Prophet-Time%20Series-green)](https://facebook.github.io/prophet/)
-[![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-red?logo=streamlit)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange?logo=scikitlearn)
+![Prophet](https://img.shields.io/badge/Prophet-Time%20Series-green)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
-**An end-to-end machine learning platform that analyzes New York City's air quality and energy demand using public real-world datasets.**
+**An end-to-end machine learning project that analyzes New York City's air quality and energy demand using real-world public datasets.**
 
 [🚀 Live Demo](https://smart-city-analytics-jexzhpr9k7vb97morgl7app.streamlit.app)
 
@@ -18,23 +18,34 @@
 
 ---
 
-## 📊 Project Overview
+## 📊 What is NYC Smart City Predictive Analytics?
 
-NYC Smart City Predictive Analytics combines **air quality, energy demand, and traffic data** to explore how city activity relates to pollution and electricity consumption.
+NYC Smart City Predictive Analytics is an end-to-end machine learning project designed to analyze relationships between **air quality, energy demand, and city activity** in New York City.
 
-The project uses machine learning and time-series forecasting to:
+The project combines real-world public datasets from:
+
+- OpenAQ
+- NYC DOT
+- U.S. Energy Information Administration (EIA)
+
+It uses machine learning and time-series forecasting to predict pollution levels, forecast energy demand, and explore potential changes through an interactive what-if simulator.
+
+### The platform can:
 
 - Predict **PM2.5 pollution levels**
-- Forecast **energy demand 48 hours ahead**
-- Analyze pollution patterns by **hour and day of week**
-- Simulate **what-if city activity scenarios**
-- Collect live traffic data for future model improvements
+- Forecast **NYC energy demand 48 hours ahead**
+- Analyze pollution patterns by **hour of day and day of week**
+- Compare different machine learning models
+- Simulate reduced city activity scenarios
+- Continuously collect live traffic data for future model improvements
 
 ---
 
-## 🎯 What This Project Does
+## 🔍 Project Overview
 
-### 🌫️ PM2.5 Prediction
+The project focuses on two major predictive tasks:
+
+### 🌫️ PM2.5 Pollution Prediction
 
 A machine learning model predicts PM2.5 pollution levels using:
 
@@ -42,117 +53,90 @@ A machine learning model predicts PM2.5 pollution levels using:
 - Day of week
 - Energy demand
 
-Two models were evaluated:
+Two models were trained and compared:
 
-| Model | Purpose | Metric |
-|---|---|---:|
-| Random Forest | PM2.5 Prediction | **MAE ≈ 2.5** |
-| Linear Regression | Baseline | Higher MAE |
+- Linear Regression
+- Random Forest
 
-Random Forest was selected based on the model comparison.
-
----
+The Random Forest model achieved an approximate **MAE of 2.5** and was selected for the dashboard.
 
 ### ⚡ Energy Demand Forecasting
 
-The project uses **Prophet time-series forecasting** to predict electricity demand for the next:
+The project uses **Prophet time-series forecasting** to forecast electricity demand for the next:
 
 **48 hours**
 
-This helps visualize expected demand patterns and provides a foundation for future smart-city forecasting applications.
-
----
-
 ### 🔮 What-If Pollution Simulator
 
-The dashboard includes an interactive simulator that allows users to explore scenarios involving reduced city activity.
+The Streamlit dashboard includes a what-if simulator that allows users to explore how reducing city activity could affect predicted PM2.5 levels.
 
-The simulator estimates how changes in activity-related energy demand could affect predicted PM2.5 levels.
-
-> The current simulator uses energy demand as a proxy for city activity because live traffic data has not yet been integrated into the trained prediction model.
+The current simulator uses **energy demand as a proxy for city activity**, because live traffic data is not yet integrated into the trained pollution model.
 
 ---
 
-## 📈 Key Finding
+# 📈 Benchmark & Model Performance
 
-### Day of Week is the strongest predictor
+## PM2.5 Prediction
 
-Feature importance from the Random Forest model:
+| Model | Purpose | Metric | Result |
+|---|---|---|---:|
+| Random Forest | PM2.5 Prediction | MAE | **≈ 2.5** |
+| Linear Regression | Baseline Comparison | MAE | Higher than Random Forest |
 
-| Feature | Importance |
-|---|---:|
-| **Day of Week** | **42%** |
-| Energy Demand | **37%** |
-| Hour of Day | **21%** |
+Random Forest was selected after comparing its performance against the Linear Regression baseline.
 
-This suggests that **weekly activity patterns** have a stronger relationship with predicted pollution levels than the time of day alone within this dataset.
+## Energy Forecasting
 
----
-
-## 🏆 Model Performance
-
-| Model | Task | Result |
-|---|---|---|
-| Random Forest | PM2.5 Prediction | **MAE ≈ 2.5** |
-| Linear Regression | Baseline Comparison | Higher MAE |
-| Prophet | Energy Forecasting | **48-hour horizon** |
+| Model | Purpose | Forecast Horizon |
+|---|---|---:|
+| Prophet | Energy Demand Forecasting | **48 Hours** |
 
 ---
 
-## 🗃️ Data Sources
+# 🧠 Machine Learning Pipeline
 
-The project combines data from multiple public sources.
-
-### 🌫️ Air Quality
-
-**OpenAQ**
-
-Provides pollutant measurements including:
-
-- PM2.5
-- O₃
-- NO₂
-- Other pollutants
-
-[OpenAQ](https://openaq.org)
-
----
-
-### 🚦 Traffic
-
-**NYC DOT Real-Time Traffic Speeds**
-
-Live road-segment speed data is collected hourly through an automated process.
-
-[NYC Open Data](https://data.cityofnewyork.us)
-
----
-
-### ⚡ Energy
-
-**U.S. Energy Information Administration**
-
-Hourly electricity demand data for New York State.
-
-[EIA Open Data](https://www.eia.gov/opendata/)
-
----
-
-## 🔄 Project Workflow
+The complete machine learning pipeline consists of the following stages:
 
 ```text
-Public APIs
-     ↓
-Data Collection
-     ↓
-Data Cleaning & Processing
-     ↓
-Feature Engineering
-     ↓
-Model Training
-     ↓
-Model Evaluation
-     ↓
-Predictions & Forecasts
-     ↓
-Interactive Streamlit Dashboard
+┌─────────────────────────────┐
+│       Public Data APIs      │
+│ OpenAQ | NYC DOT | EIA      │
+└──────────────┬──────────────┘
+               ↓
+┌─────────────────────────────┐
+│       Data Collection       │
+│ Air Quality | Traffic |     │
+│ Energy Demand               │
+└──────────────┬──────────────┘
+               ↓
+┌─────────────────────────────┐
+│      Data Engineering       │
+│ Cleaning | Missing Values   │
+│ Time Alignment | Merging    │
+└──────────────┬──────────────┘
+               ↓
+┌─────────────────────────────┐
+│     Feature Engineering     │
+│ Hour | Day of Week | Energy │
+│ Demand                      │
+└──────────────┬──────────────┘
+               ↓
+       ┌───────┴────────┐
+       ↓                ↓
+┌──────────────┐  ┌──────────────┐
+│ PM2.5 Model  │  │ Energy Model │
+│              │  │              │
+│ Linear       │  │ Prophet      │
+│ Regression   │  │ Forecasting  │
+│      ↓       │  │      ↓       │
+│ Random       │  │ 48-Hour      │
+│ Forest       │  │ Forecast     │
+└──────┬───────┘  └──────┬───────┘
+       ↓                 ↓
+       └────────┬────────┘
+                ↓
+┌─────────────────────────────┐
+│    Streamlit Dashboard      │
+│ Analytics | Forecast |      │
+│ Prediction | What-If        │
+└─────────────────────────────┘
